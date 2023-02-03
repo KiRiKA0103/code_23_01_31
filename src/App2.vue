@@ -1,32 +1,21 @@
 <template>
   <div class="app-container">
-    <h1>App 根组件</h1>
-
+    <h1>App2 组件</h1>
     <a href="#/home">首页</a>
     <a href="#/movie">电影</a>
     <a href="#/about">关于</a>
-    <hr />
+    <router-link to="/movie/1?name=zs age=20">电影1</router-link>
+    <router-link to="/movie/2">电影2</router-link>
+    <router-link to="/movie/3">电影3</router-link>
 
-    <Home></Home>
-    <Movie></Movie>
-    <About></About>
+    <hr />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-// 导入组件
-import Home from '@/components/Home.vue'
-import Movie from '@/components/Movie.vue'
-import About from '@/components/About.vue'
-
 export default {
-  name: 'App',
-  // 注册组件
-  components: {
-    Home,
-    Movie,
-    About
-  }
+  name: 'App'
 }
 </script>
 
@@ -38,6 +27,7 @@ export default {
   padding: 15px;
   > a {
     margin-right: 10px;
+    text-decoration: none;
   }
 }
 </style>

@@ -1,6 +1,10 @@
 <template>
   <div class="about-container">
     <h3>About 组件</h3>
+
+    <router-link to="/about/tab1">TAB1</router-link>
+    <router-link to="/about/tab2">TAB2</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -15,5 +19,8 @@ export default {
   min-height: 200px;
   background-color: skyblue;
   padding: 15px;
+  > a {
+    margin-right: 10px;
+  }
 }
 </style>
